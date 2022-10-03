@@ -1,0 +1,25 @@
+table , thead ,td {
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+thead{
+    font-weight: bold;
+
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(odd) {
+    background-color: rgb(222, 225, 222);
+}
+#errorMsg{
+    color: red;
+    font-size: larger;
+}
