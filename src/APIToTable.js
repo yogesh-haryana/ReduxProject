@@ -44,7 +44,7 @@ class APIToTable extends Component {
             <tbody>
           {
             details.length ?
-            details.map(detail => <tr key={detail.id}><td>{detail.username}</td>
+            details.map(detail => <tr key={detail.id}><td>{detail.name}</td>
             <td>{detail.email}</td>
             <td>{detail.address.city}</td></tr>) :
             null
