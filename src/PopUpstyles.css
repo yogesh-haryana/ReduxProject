@@ -1,0 +1,38 @@
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(129, 129, 129);
+    opacity: 0.6;
+    z-index: 1;
+
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    width: 300px;
+    height: 350px;
+    z-index: 2;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    line-height: 2;
+
+
+}
+.popup .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+}
+#info{
+    font-size: large;
+    font-weight: bold;
+}
