@@ -16,21 +16,18 @@
     left: 50%;
     transform: translate(-50%,-50%);
     background: #fff;
-    width: 300px;
+    width: 400px;
     height: 350px;
     z-index: 2;
     text-align: center;
     padding: 30px;
     box-sizing: border-box;
     line-height: 2;
-
-
 }
 .popup .close-btn {
     position: absolute;
     top: 20px;
     right: 20px;
-
 }
 #info{
     font-size: large;
