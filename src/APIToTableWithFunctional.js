@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PopUpComp from './PopUpComp';
-import DataForm from './DataForm';
+import OldDataForm from './OldDataForm';
 
 
 function APIToTableWithFunctional() {
@@ -28,6 +28,7 @@ function APIToTableWithFunctional() {
     []);
 
     function FormDataInParentcomp(item) {
+        console.log(item);
         let itemdata = [];
         itemdata.push(item);
         setDetails(details = details.concat(itemdata));
@@ -66,7 +67,7 @@ function APIToTableWithFunctional() {
 
                     }</tbody>
             </table>
-            <DataForm formTrigger={formPopUp} totalElements={totalData} setFormTrigger={setFormPopUp} DataTransfer={FormDataInParentcomp}></DataForm>
+            <OldDataForm formTrigger={formPopUp} totalElements={totalData} setFormTrigger={setFormPopUp} DataTransfer={FormDataInParentcomp}></OldDataForm>
             <PopUpComp info={userDetails} trigger={buttonPopUp} setTrigger={setButtonPopUp}></PopUpComp>
         </div>
     );

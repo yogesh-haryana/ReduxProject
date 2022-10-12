@@ -5,10 +5,10 @@ import * as Yup from 'yup'
 
 
 function DataForm(props) {
-    console.log('length of the array is ',props.totalElements);
+
     const formik = useFormik({
         initialValues: {
-            id: props.totalElements + 1,
+            id: Math.floor(Math.random()*100) +1,
             name: '',
             username: '',
             email: '',
@@ -52,13 +52,9 @@ function DataForm(props) {
             name : Yup.string().required('Required'),
             email : Yup.string().email('invalid email format').required('Required'),
             phone : Yup.number().required('Required')
-
-
         })
-
-
     });
-    console.log('visited fields',formik.touched);
+    // console.log('visited fields',formik.touched);
 
     return (props.formTrigger) && (
         <div setformtrigger={props.formTrigger}>
@@ -101,7 +97,6 @@ function DataForm(props) {
                                     onChange={formik.handleChange}
                                     value={formik.values.website}
                                 />
-
                                 <div>
                                     <h2>company</h2>
                                     <label htmlFor='companyname'>Enter a companyName : </label>
@@ -119,10 +114,8 @@ function DataForm(props) {
                                         onChange={formik.handleChange}
                                         value={formik.values.company.bs}
                                     />
-
                                 </div>
                             </div>
-
                             <div className='container container2' >
                                 <h3>Address :</h3>
                                 <label htmlFor='street'>Enter a street : </label>
@@ -168,5 +161,4 @@ function DataForm(props) {
         </div >
     );
 }
-
 export default DataForm;
