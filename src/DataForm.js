@@ -1,56 +1,64 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import './FormStyles.css';
+import * as Yup from 'yup'
 
-const initialValues = {
-    id: '',
-    name: '',
-    username: '',
-    email: '',
-    address: {
-        street: '',
-        suite: '',
-        city: '',
-        zip: '',
-        geo: {
-            lat: '',
-            lng: ''
-        }
-    },
-    phone: '',
-    website: '',
-    company: {
-        name: '',
-        catchPhrase: '',
-        bs: ''
-    }
-};
-const onSubmit = values => {
-    console.log(values);
-};
-const validate = values => {
-    let errors = {};
-    if (!values.name) {
-        errors.name = 'Name is Required';
-    }
-    if (!values.email) {
-        errors.email = ' email is Required';
-    } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(values.email)){
-        errors.email = 'invalid email format';
-    }
-    if (!values.phone) {
-        errors.phone = 'Phone number is required';
-    }
-    return errors;
-};
 
 function DataForm(props) {
+    console.log('length of the array is ',props.totalElements);
     const formik = useFormik({
-        initialValues,
-        onSubmit,
-        validate
+        initialValues: {
+            id: props.totalElements + 1,
+            name: '',
+            username: '',
+            email: '',
+            address: {
+                street: '',
+                suite: '',
+                city: '',
+                zip: '',
+                geo: {
+                    lat: '',
+                    lng: ''
+                }
+            },
+            phone: '',
+            website: '',
+            company: {
+                name: '',
+                catchPhrase: '',
+                bs: ''
+            }
+        },
+        onSubmit: values => {
+            console.log(values);
+        },
+        // validate: values => {
+        //     let errors = {};
+        //     if (!values.name) {
+        //         errors.name = 'Name is Required';
+        //     }
+        //     if (!values.email) {
+        //         errors.email = ' email is Required';
+        //     } else if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(values.email)) {
+        //         errors.email = 'invalid email format';
+        //     }
+        //     if (!values.phone) {
+        //         errors.phone = 'Phone number is required';
+        //     }
+        //     return errors;
+        // },
+        validationSchema : Yup.object({
+            name : Yup.string().required('Required'),
+            email : Yup.string().email('invalid email format').required('Required'),
+            phone : Yup.number().required('Required')
+
+
+        })
+
 
     });
+    console.log('visited fields',formik.touched);
 
     return (props.formTrigger) && (
         <div setformtrigger={props.formTrigger}>
@@ -61,17 +69,13 @@ function DataForm(props) {
                         <h2>User Details Form</h2>
                         <form onSubmit={formik.handleSubmit}>
                             <div className='container container1'>
-                                <label htmlFor='id'>Enter a id : </label>
-                                <input name='id' type='text' id='id'
-                                    onChange={formik.handleChange}
-                                    value={formik.values.id}
-                                />                                
                                 <label htmlFor='name'>Enter a name : </label>
                                 <input name='name' type='text' id='name'
                                     onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
                                     value={formik.values.name}
                                 />
-                                {formik.errors.name && <div className='errormsg'>{formik.errors.name}</div>}
+                                {(formik.touched.name && formik.errors.name) && <div className='errormsg'>{formik.errors.name}</div>}
                                 <label htmlFor='username'>Enter a username : </label>
                                 <input name='username' type='text' id='username'
                                     onChange={formik.handleChange}
@@ -80,16 +84,18 @@ function DataForm(props) {
                                 <label htmlFor='email'>Enter a email : </label>
                                 <input name='email' type='text' id='email'
                                     onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
                                     value={formik.values.email}
                                 />
-                                {formik.errors.email && <div className='errormsg'>{formik.errors.email}</div>}
+                                { (formik.touched.email && formik.errors.email) && <div className='errormsg'>{formik.errors.email}</div>}
 
                                 <label htmlFor='phone'>Enter a phone : </label>
                                 <input name='phone' type='text' id='phone'
                                     onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
                                     value={formik.values.phone}
                                 />
-                                {formik.errors.phone && <div className='errormsg'>{formik.errors.phone}</div>}
+                                {(formik.touched.phone && formik.errors.phone) && <div className='errormsg'>{formik.errors.phone}</div>}
                                 <label htmlFor='website'>Enter a website : </label>
                                 <input name='website' type='text' id='website'
                                     onChange={formik.handleChange}
@@ -153,8 +159,8 @@ function DataForm(props) {
                                     />
                                 </div>
                             </div>
-                            <button type='submit' onClick={()=>props.DataTransfer(formik.values)}>Submit</button>
-                            <button className='close-form' onClick={() => props.setFormTrigger(false)}>close</button>
+                            <button type='submit' className='submit-btn' onClick={() => props.DataTransfer(formik.values)}>Submit</button>
+                            <a className='close-form' onClick={() => props.setFormTrigger(false)}>×</a>
                         </form >
                     </div>
                 </div >

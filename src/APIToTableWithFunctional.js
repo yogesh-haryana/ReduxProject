@@ -28,15 +28,14 @@ function APIToTableWithFunctional() {
     []);
 
     function FormDataInParentcomp(item) {
-        console.log('this is item', item);
         let itemdata = [];
         itemdata.push(item);
-        console.log('this is item data ',itemdata);
         setDetails(details = details.concat(itemdata));
+        setFormPopUp(false);
         console.log('final array is here ', details);
         
-
     }
+    const totalData = details.length;
 
     return (
         <div>
@@ -67,7 +66,7 @@ function APIToTableWithFunctional() {
 
                     }</tbody>
             </table>
-            <DataForm formTrigger={formPopUp} setFormTrigger={setFormPopUp} DataTransfer={FormDataInParentcomp}></DataForm>
+            <DataForm formTrigger={formPopUp} totalElements={totalData} setFormTrigger={setFormPopUp} DataTransfer={FormDataInParentcomp}></DataForm>
             <PopUpComp info={userDetails} trigger={buttonPopUp} setTrigger={setButtonPopUp}></PopUpComp>
         </div>
     );
