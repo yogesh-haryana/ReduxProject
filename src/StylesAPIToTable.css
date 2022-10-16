@@ -10,12 +10,13 @@ table {
     font-size: 1rem;
     align-items: center;
     border-collapse: collapse;
-    width: 70%;
+    width: 80%;
     margin: 15px auto ;
-    border-top-left-radius : 12px;
-    border-top-right-radius: 12px;
-
-
+    /* border-top-left-radius : 12px; */
+    /* border-top-right-radius: 12px; */
+}
+table, th, td {
+    border: 1px solid black;
 }
 tr:nth-child(odd) {
     background-color: rgb(247, 224, 204);
@@ -30,12 +31,12 @@ thead{
     font-weight: bold;
 
 } 
-thead :first-child {
+/* thead :first-child {
     border-top-left-radius: 12px;
 }
 thead :last-child {
     border-top-right-radius: 12px;
-}
+} */
 td {
     text-align: center;
     padding: 6px;
