@@ -43,6 +43,7 @@ function APIToTableWithFunctional() {
             <div className='buttoncontainer'>
                 <button className='addNewUser' onClick={() => setFormPopUp(true)} >Add New User</button>
             </div>
+            <div className='tableContainer'>
             <table>
                 <thead>
                     <tr>
@@ -67,6 +68,7 @@ function APIToTableWithFunctional() {
 
                     }</tbody>
             </table>
+            </div>
             <OldDataForm formTrigger={formPopUp} totalElements={totalData} setFormTrigger={setFormPopUp} DataTransfer={FormDataInParentcomp}></OldDataForm>
             <PopUpComp info={userDetails} trigger={buttonPopUp} setTrigger={setButtonPopUp}></PopUpComp>
         </div>

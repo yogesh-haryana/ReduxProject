@@ -24,6 +24,9 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
     background-color: rgb(237, 244, 249);
 }
+table thead th, table thead td{
+    background: burlywood;
+}
 thead{
     background-color: rgb(233, 104, 247);
     padding: 6px;
@@ -47,7 +50,17 @@ td {
     color: red;
     font-size: larger;
 }
+.buttoncontainer{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: block;
+    justify-content: right;
+ }
 .addNewUser{
+    position: absolute;
+    right: 10%;
+    top: 5%;
     background-color: green;
     color: #fff;
     border: 2px solid rgb(0, 34, 10);
@@ -56,12 +69,11 @@ td {
     line-height: 2;
     text-align: center;
     justify-items: center;
-    margin: 20px auto 30px;
+    margin: 20px 10px 20px 0;
  }
- .buttoncontainer{
-    width: 100%;
-    text-align: center;
-    justify-items: center;
+ .tableContainer{
+    position: relative;
+    top: 90px;
  }
  a{
     text-decoration: underline;
