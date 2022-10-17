@@ -25,7 +25,7 @@ function APIToTableWithFunctional() {
             });
 
     },
-    []);
+        []);
 
     function FormDataInParentcomp(item) {
         console.log(item);
@@ -34,7 +34,7 @@ function APIToTableWithFunctional() {
         setDetails(details = details.concat(itemdata));
         setFormPopUp(false);
         console.log('final array is here ', details);
-        
+
     }
     const totalData = details.length;
 
@@ -44,30 +44,30 @@ function APIToTableWithFunctional() {
                 <button className='addNewUser' onClick={() => setFormPopUp(true)} >Add New User</button>
             </div>
             <div className='tableContainer'>
-            <table>
-                <thead>
-                    <tr>
-                        <td>FullName</td>
-                        <td>Email</td>
-                        <td>City</td>
-                        <td>Action</td>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>FullName</td>
+                            <td>Email</td>
+                            <td>City</td>
+                            <td>Action</td>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        details.length && details.map(detail => <tr key={detail?.id}><td>{detail?.name}</td>
-                            <td>{detail?.email}</td>
-                            <td>{detail?.address?.city}</td>
-                            <td><a
-                                onClick={
-                                    () => setuserDetails(detail, setButtonPopUp(true))} >More Info</a></td></tr>)
-                    }
-                    {
-                        (errorMsg) && <div id='errorMsg'>{errorMsg}</div>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            details.length && details.map(detail => <tr key={detail?.id}><td>{detail?.name}</td>
+                                <td>{detail?.email}</td>
+                                <td>{detail?.address?.city}</td>
+                                <td><a
+                                    onClick={
+                                        () => setuserDetails(detail, setButtonPopUp(true))} >More Info</a></td></tr>)
+                        }
+                        {
+                            (errorMsg) && <div id='errorMsg'>{errorMsg}</div>
 
-                    }</tbody>
-            </table>
+                        }</tbody>
+                </table>
             </div>
             <OldDataForm formTrigger={formPopUp} totalElements={totalData} setFormTrigger={setFormPopUp} DataTransfer={FormDataInParentcomp}></OldDataForm>
             <PopUpComp info={userDetails} trigger={buttonPopUp} setTrigger={setButtonPopUp}></PopUpComp>
