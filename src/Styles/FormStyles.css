@@ -39,7 +39,6 @@
     margin: 10px 0 6px 0 ;
     width: calc(100% /3 - 10px);
     display: inline-block;
-    /* justify-content: space-between; */
 }
 label{
     display: block;

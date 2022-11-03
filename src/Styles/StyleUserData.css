@@ -1,19 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body{
+    font-family: 'Roboto', sans-serif;
     background-color: #ddd;
+    font-size: 1rem;
     margin: 0;
     height: 100vh;
-    /* display: flex; */
-    /* justify-content: center; */
     align-items: center;
 }
 table {
-    font-size: 1rem;
     align-items: center;
     border-collapse: collapse;
-    width: 80%;
-    margin: 15px auto ;
-    /* border-top-left-radius : 12px; */
-    /* border-top-right-radius: 12px; */
+    width: 70% !important;
+    margin: 0 auto ;
 }
 table, th, td {
     border: 1px solid black;
@@ -27,25 +26,13 @@ tr:nth-child(even) {
 table thead th, table thead td{
     background: burlywood;
 }
-thead{
+Thead{
     background-color: rgb(233, 104, 247);
     padding: 6px;
     text-transform: uppercase;
     font-weight: bold;
-
 } 
-/* thead :first-child {
-    border-top-left-radius: 12px;
-}
-thead :last-child {
-    border-top-right-radius: 12px;
-} */
-td {
-    text-align: center;
-    padding: 6px;
-    text-transform: capitalize;
-}
-  
+
 #errorMsg{
     color: red;
     font-size: larger;
@@ -59,12 +46,12 @@ td {
  }
 .addNewUser{
     position: absolute;
-    right: 10%;
+    right: 15%;
     top: 5%;
     background-color: green;
     color: #fff;
-    border: 2px solid rgb(0, 34, 10);
-    border-radius: 8px;
+    border: 1px solid green;
+    border-radius: 5px;
     width: 120px;
     line-height: 2;
     text-align: center;
@@ -73,14 +60,15 @@ td {
  }
  .tableContainer{
     position: relative;
-    top: 90px;
+    top: 60px;
  }
- a{
+ .clickhere{
+    border: none;
     text-decoration: underline;
     color: blue;
     
  }
- a:hover{
+ .clickhere:hover{
     cursor: pointer;
     color: rgb(250, 82, 39);
  }

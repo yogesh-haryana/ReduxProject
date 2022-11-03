@@ -26,11 +26,12 @@
 }
 .popup .close-btn {
     position: absolute;
-    font-size: 1.8rem;
+    font-size: 1rem;
     text-decoration: none;
     top: 14px;
     line-height: 1;
     right: 15px;
+    border: none;
 }
 #info{
     font-size: large;

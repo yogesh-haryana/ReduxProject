@@ -1,14 +1,12 @@
-// import APIToTable from './APIToTable';
-import APIToTableWithFunctional from './APIToTableWithFunctional';
-import './StylesAPIToTable.css';
+import UserData from './components/UserData';
+import './Styles/StyleUserData.css';
 
 function App() {
-    return (
-        <div className="App">
-            {/* <APIToTable/> */}
-            <APIToTableWithFunctional />
-        </div>
-    );
+  return (
+    <div className="App">
+      <UserData />
+    </div>
+  );
 }
 
 export default App;

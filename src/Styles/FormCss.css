@@ -1,0 +1,77 @@
+.formpopup .formoverlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(129, 129, 129);
+    opacity: 0.6;
+    z-index: 1;
+}
+.formcontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #FBF2CF;
+    width: 60%;
+    z-index: 2;
+    font-size: 12px;
+    box-sizing: border-box;
+    max-height: 600px;
+    border: 0.1px solid white;
+    border-radius: 5px;
+}
+.popupheader{
+    text-align: center;
+    width: 100%;
+    background-color: #3082d3;
+    height: 40px;
+    line-height: 2px;
+}
+.formheading{
+    font-size: 20px;
+    font-weight:600;
+    color: white;
+}
+.formbody{
+    margin: 0 !important;
+    padding: 0px 12px 12px 12px;
+}
+TextField{
+    height: 40px;
+}
+.formpopup .close-form {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.container{
+    width: 45%;
+    display: inline-block;
+    margin-top: 0;
+}
+.button-container{
+    padding-left: 20px;
+}
+.submit-btn, .cancle-btn{
+    float: right;
+}
+.submit-btn{
+    margin-left: 15px !important;
+}
+.errormsg{
+    color: red;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+    height: 1.em !important;
+    padding: 6px 6px !important;
+    font-size: 12px !important;
+ }
+ .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+    font-size: 12px !important;
+    line-height: 4px !important;
+    overflow: visible !important;
+    text-overflow: ellipsis !important;
+    padding-bottom: 5px !important;
+ }
