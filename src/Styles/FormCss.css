@@ -13,6 +13,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    /* transform: scale(1); */
+    transition: visiblity 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
     background: #FBF2CF;
     width: 60%;
     z-index: 2;
@@ -56,12 +58,14 @@ TextField{
 }
 .submit-btn, .cancle-btn{
     float: right;
+    cursor: pointer;
 }
 .submit-btn{
     margin-left: 15px !important;
 }
-.errormsg{
-    color: red;
+.error-msg{
+    color: #d32f2f;
+    display: block;
 }
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
     height: 1.em !important;

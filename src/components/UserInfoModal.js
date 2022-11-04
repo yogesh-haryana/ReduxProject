@@ -3,9 +3,8 @@ import '../Styles/PopUpstyles.css';
 import PropTypes from 'prop-types';
 
 function UserInfoModal(props) {
-  const { trigger, info } = props;
+  const { info, trigger, setTrigger } = props;
   return (trigger) && (
-    // eslint-disable-next-line react/no-unknown-property
     <div>
       <div className="popup">
         <div className="overlay" />
@@ -39,7 +38,7 @@ function UserInfoModal(props) {
             Company name  :
             {info.company.name}
           </div>
-          <button type="button" className="close-btn" onClick={() => trigger(false)}>×</button>
+          <button type="button" className="close-btn" onClick={() => setTrigger(false)}>×</button>
         </div>
       </div>
 
@@ -50,7 +49,7 @@ function UserInfoModal(props) {
 UserInfoModal.propTypes = {
   trigger: PropTypes.bool.isRequired,
   info: PropTypes.arrayOf.isRequired,
-  // setTrigger: PropTypes.bool
+  setTrigger: PropTypes.func.isRequired,
 };
 
 UserInfoModal.defaultProps = {
