@@ -27,14 +27,18 @@
 .close-btn {
     background: transparent;
     position: absolute;
-    color: red;
-    font-size: 20px !important;
+    color: blue;
+    font-size: 30px;
     text-decoration: none;
-    top: 14px;
+    top: 10px;
     line-height: 1;
     right: 15px;
     border: none;
     cursor: pointer;
+}
+.close-btn:hover{
+    color: red;
+    font-size: 34px;
 }
 .infoHeading {
     font-size: 20px;

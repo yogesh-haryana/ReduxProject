@@ -51,3 +51,20 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+## How to run - Video and Screenshots Tutorial
+
+[![Watch the video](https://drive.google.com/uc?export=view&id=1HEkik4VkW7XVs7jaxy6YPBJ63f1F49dt)](https://drive.google.com/uc?export=view&id=1jHrW0TQa09Ap8la4xU79nruAmhYzxhTc)
+
+
+![screenshot](https://drive.google.com/uc?export=view&id=1jHrW0TQa09Ap8la4xU79nruAmhYzxhTc)
+
+![screenshot](https://drive.google.com/uc?export=view&id=1_v36_OHd6UOi9bny74ZMLjz8Q0xUJsX1)
+
+![screenshot](https://drive.google.com/uc?export=view&id=12zleMD-nHVv8rxx_QK9oWACtMQeJS3jZ)
+
+![screenshot](https://drive.google.com/uc?export=view&id=1Dq4iU9uz5uoVKyPuj0lT2P9g_ssOIMlk)
+
+![screenshot](https://drive.google.com/uc?export=view&id=1JOdRZhErqTGB-8C8tRjBONyfnhSl8vc9)
+
+![screenshot](https://drive.google.com/uc?export=view&id=1ryaSZrK3xgcZUqpup1gv624r320wv6r8)

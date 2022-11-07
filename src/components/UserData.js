@@ -9,8 +9,7 @@ import UserInfoModal from './UserInfoModal';
 import FormUserData from './FormUserData';
 
 function UserData() {
-  // eslint-disable-next-line prefer-const
-  let [details, setDetails] = useState([]);
+  const [details, setDetails] = useState([]);
   const [errorMsg, setMsg] = useState('');
   const [buttonPopUp, setButtonPopUp] = useState(false);
   const [userDetails, setuserDetails] = useState([]);
@@ -29,9 +28,7 @@ function UserData() {
   const notify = () => toast('User Details Saved Successfully.');
 
   function FormDataInParentcomp(item) {
-    const itemdata = [];
-    itemdata.push(item);
-    setDetails(details = details.concat(itemdata));
+    setDetails([...details, item]);
     notify();
   }
   const totalData = details.length;
