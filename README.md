@@ -54,7 +54,7 @@ Your app is ready to be deployed!
 
 ## How to run - Video and Screenshots Tutorial
 
-[![Watch the video](https://drive.google.com/uc?export=view&id=1HEkik4VkW7XVs7jaxy6YPBJ63f1F49dt)](https://drive.google.com/uc?export=view&id=1jHrW0TQa09Ap8la4xU79nruAmhYzxhTc)
+[![Watch the video](https://drive.google.com/uc?export=view&id=1jHrW0TQa09Ap8la4xU79nruAmhYzxhTc)](https://drive.google.com/uc?export=view&id=1HEkik4VkW7XVs7jaxy6YPBJ63f1F49dt)
 
 
 ![screenshot](https://drive.google.com/uc?export=view&id=1jHrW0TQa09Ap8la4xU79nruAmhYzxhTc)
