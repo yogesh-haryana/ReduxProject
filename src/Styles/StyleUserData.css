@@ -2,29 +2,26 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #ddd;
     font-size: 1rem;
     margin: 0;
     height: 100vh;
     align-items: center;
 }
-table {
-    align-items: center;
-    border-collapse: collapse;
-    width: 70% !important;
-    margin: 0 auto ;
+.UserTable {
+    margin: 25px 0 ;
 }
-table, th, td {
-    border: 1px solid black;
+.mainWrapper{
+    width: 70%;
+    margin: 0 auto;
 }
-tr:nth-child(odd) {
-    background-color: rgb(247, 224, 204);
+.UserTable, .UserTable th, .UserTable td {
+    border: 1px solid #BAD1C2
 }
-tr:nth-child(even) {
-    background-color: rgb(237, 244, 249);
-}
-table thead th, table thead td{
-    background: burlywood;
+table thead th {
+    background: #4FA095;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #fff !important;
 }
 Thead{
     background-color: rgb(233, 104, 247);
@@ -38,33 +35,25 @@ Thead{
     font-size: larger;
 }
 .buttoncontainer{
-    width: 100%;
-    text-align: center;
-    position: relative;
+    text-align: right;
     display: block;
-    justify-content: right;
  }
 .addNewUser{
-    position: absolute;
-    right: 15%;
-    top: 5%;
-    background-color: green;
+    font-size: 17px;
+    background-color: #3C4048;
     color: #fff;
-    border: 1px solid green;
-    border-radius: 5px;
-    width: 120px;
-    line-height: 2;
-    text-align: center;
-    justify-items: center;
-    margin: 20px 10px 20px 0;
+    border: none;
+    border-radius: 2px;
+    width: 150px;
+    padding: 10px;
+    margin: 30px 0 5px 0;
  }
  .tableContainer{
     position: relative;
-    top: 60px;
  }
  .clickhere{
+    background: transparent;
     border: none;
-    text-decoration: underline;
     color: blue;
     
  }

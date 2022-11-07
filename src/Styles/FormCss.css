@@ -13,16 +13,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    /* transform: scale(1); */
-    transition: visiblity 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-    background: #FBF2CF;
+    /* transition: all 5s ease-in-out; */
+    background: #fff;
     width: 60%;
     z-index: 2;
     font-size: 12px;
     box-sizing: border-box;
     max-height: 600px;
-    border: 0.1px solid white;
-    border-radius: 5px;
+    border: none;
+    border-radius: 3px;
 }
 .popupheader{
     text-align: center;
@@ -54,6 +53,7 @@ TextField{
     margin-top: 0;
 }
 .button-container{
+    margin-top: 10px;
     padding-left: 20px;
 }
 .submit-btn, .cancle-btn{

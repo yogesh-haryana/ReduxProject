@@ -38,10 +38,10 @@ function FormUserData(props) {
             </div>
             <div className="formbody">
               <form name="userdataform" onSubmit={handleSubmit((e) => onSubmit(e, DataTransfer))}>
-                <h3>Personal Details: </h3>
+                <h2>Personal Details: </h2>
                 <Stack direction="row" spacing={2}>
                   <TextField
-                    label="Name"
+                    placeholder="Name"
                     variant="outlined"
                     {...register('name', {
                       required: 'Name is Required',
@@ -55,7 +55,7 @@ function FormUserData(props) {
                   />
                   {/* {errors.name && (<div className="error-msg">{errors.name.message}</div>)} */}
                   <TextField
-                    label="UserName"
+                    placeholder="UserName"
                     variant="outlined"
                     {...register('username', {
                       required: 'Username is Required',
@@ -64,7 +64,7 @@ function FormUserData(props) {
                     helperText={errors.username?.message}
                   />
                   <TextField
-                    label="Email"
+                    placeholder="Email"
                     variant="outlined"
                     {...register('email', {
                       required: 'Email is Required',
@@ -77,7 +77,7 @@ function FormUserData(props) {
                     helperText={errors.email?.message}
                   />
                   <TextField
-                    label="Phone Number"
+                    placeholder="Phone Number"
                     variant="outlined"
                     {...register('phone', {
                       required: 'Phone Number is Required',
@@ -93,7 +93,7 @@ function FormUserData(props) {
                 <br />
                 <Stack direction="row" spacing={2}>
                   <TextField
-                    label="Website"
+                    placeholder="Website"
                     variant="outlined"
                     {...register('website', {
                       required: 'Web address is Required',
@@ -106,10 +106,10 @@ function FormUserData(props) {
                     helperText={errors.website?.message}
                   />
                 </Stack>
-                <h3>Company: </h3>
+                <h2>Company: </h2>
                 <Stack direction="row" spacing={2}>
                   <TextField
-                    label="Name"
+                    placeholder="Name"
                     variant="outlined"
                     {...register('company.name', {
                       required: 'Company Name is Required',
@@ -122,7 +122,7 @@ function FormUserData(props) {
                     helperText={errors.company?.name?.message}
                   />
                   <TextField
-                    label="Bs"
+                    placeholder="Bs"
                     variant="outlined"
                     {...register('company.bs', {
                       required: 'Bs is Required',
@@ -135,7 +135,7 @@ function FormUserData(props) {
                     helperText={errors.company?.bs?.message}
                   />
                   <TextField
-                    label="Catch Phrase"
+                    placeholder="Catch Phrase"
                     variant="outlined"
                     {...register('company.catchphrase', {
                       required: 'Catch Phrase is Required',
@@ -148,10 +148,10 @@ function FormUserData(props) {
                     helperText={errors.company?.catchphrase?.message}
                   />
                 </Stack>
-                <h3>Address: </h3>
+                <h2>Address: </h2>
                 <Stack direction="row" spacing={2}>
                   <TextField
-                    label="Street"
+                    placeholder="Street"
                     variant="outlined"
                     {...register('address.street', {
                       required: 'Street is Required',
@@ -164,7 +164,7 @@ function FormUserData(props) {
                     helperText={errors.address?.street?.message}
                   />
                   <TextField
-                    label="Suite"
+                    placeholder="Suite"
                     variant="outlined"
                     {...register('address.suite', {
                       required: 'Suite is Required',
@@ -178,7 +178,7 @@ function FormUserData(props) {
 
                   />
                   <TextField
-                    label="City"
+                    placeholder="City"
                     variant="outlined"
                     {...register('address.city', {
                       required: 'City is Required',
@@ -191,23 +191,23 @@ function FormUserData(props) {
                     helperText={errors.address?.city?.message}
                   />
                   <TextField
-                    label="Zipcode"
+                    placeholder="Zipcode"
                     variant="outlined"
                     {...register('address.zipcode', {
                       required: 'Zipcode is Required',
                       pattern: {
                         value: /^[0-9]{6}$/,
-                        message: 'Enter a valid city.',
+                        message: 'Enter a valid zipcode.',
                       },
                     })}
                     error={Boolean(errors.address?.zipcode)}
                     helperText={errors.address?.zipcode?.message}
                   />
                 </Stack>
-                <h3>Geo: </h3>
+                <h2>Geo: </h2>
                 <Stack direction="row" spacing={2}>
                   <TextField
-                    label="lat"
+                    placeholder="lat"
                     variant="outlined"
                     {...register('address.geo.lat', {
                       required: 'Latitude is Required',
@@ -220,7 +220,7 @@ function FormUserData(props) {
                     helperText={errors.address?.geo?.lat?.message}
                   />
                   <TextField
-                    label="lng"
+                    placeholder="lng"
                     variant="outlined"
                     {...register('address.geo.lng', {
                       required: 'Longitude is Required',

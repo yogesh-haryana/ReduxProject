@@ -7,9 +7,7 @@
     background-color: rgb(129, 129, 129);
     opacity: 0.6;
     z-index: 1;
-
 }
-
 .popup .content {
     position: fixed;
     top: 50%;
@@ -20,13 +18,17 @@
     height: 350px;
     z-index: 2;
     text-align: center;
-    padding: 30px;
+    padding: 10px;
     box-sizing: border-box;
-    line-height: 2;
+    border: none;
+    border-radius: 4px;
+    /* line-height: 2; */
 }
-.popup .close-btn {
+.close-btn {
+    background: transparent;
     position: absolute;
-    font-size: 1rem;
+    color: red;
+    font-size: 20px !important;
     text-decoration: none;
     top: 14px;
     line-height: 1;
@@ -34,8 +36,14 @@
     border: none;
     cursor: pointer;
 }
-#info{
-    font-size: large;
+.infoHeading {
+    font-size: 20px;
     font-weight: bold;
-    color: blue;
+}
+.infoTable {
+    margin-top: 20px;
+    text-align: left;
+}
+.infoTable td {
+    padding: 10px;
 }

@@ -9,39 +9,42 @@ function UserInfoModal(props) {
       <div className="popup">
         <div className="overlay" />
         <div className="content">
-          <div id="info">Users Information</div>
-          <div>
-            Full Name :
-            {info.name}
-          </div>
-          <div>
-            Email :
-            {info.email}
-          </div>
-          <div>
-            city :
-            {info.address.city}
-          </div>
-          <div>
-            zip code :
-            {info.address.zipcode}
-          </div>
-          <div>
-            Phone no. :
-            {info.phone}
-          </div>
-          <div>
-            website :
-            {info.website}
-          </div>
-          <div>
-            Company name  :
-            {info.company.name}
-          </div>
+          <div className="infoHeading">User&apos;s Information</div>
+          <table className="infoTable">
+            <tbody>
+              <tr>
+                <td>Full Name :</td>
+                <td>{info.name}</td>
+              </tr>
+              <tr>
+                <td>Email :</td>
+                <td>{info.email}</td>
+              </tr>
+              <tr>
+                <td>city :</td>
+                <td>{info.address.city}</td>
+              </tr>
+              <tr>
+                <td>zip code :</td>
+                <td>{info.address.zipcode}</td>
+              </tr>
+              <tr>
+                <td>Phone no. :</td>
+                <td>{info.phone}</td>
+              </tr>
+              <tr>
+                <td>website :</td>
+                <td>{info.website}</td>
+              </tr>
+              <tr>
+                <td>Company name  :</td>
+                <td>{info.company.name}</td>
+              </tr>
+            </tbody>
+          </table>
           <button type="button" className="close-btn" onClick={() => setTrigger(false)}>×</button>
         </div>
       </div>
-
     </div>
   );
 }
