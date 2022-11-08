@@ -83,12 +83,9 @@ function UserData() {
         DataTransfer={FormDataInParentcomp}
       />
       <UserInfoModal info={userDetails} trigger={buttonPopUp} setTrigger={setButtonPopUp} />
-      <ToastContainer />
+      <ToastContainer className="Toast" />
     </div>
   );
 }
-
-UserData.propTypes = {};
-UserData.defaultProps = {};
 
 export default UserData;

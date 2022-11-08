@@ -22,7 +22,6 @@
     box-sizing: border-box;
     border: none;
     border-radius: 4px;
-    /* line-height: 2; */
 }
 .close-btn {
     background: transparent;
@@ -45,9 +44,9 @@
     font-weight: bold;
 }
 .infoTable {
-    margin-top: 20px;
+    margin: 20px 20px 0 20px;
     text-align: left;
 }
 .infoTable td {
-    padding: 10px;
+    padding: 7px;
 }

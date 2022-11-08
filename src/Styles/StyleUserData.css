@@ -1,44 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     margin: 0;
     height: 100vh;
     align-items: center;
 }
+
 .UserTable {
-    margin: 25px 0 ;
+    margin: 25px 0;
 }
-.mainWrapper{
+
+.mainWrapper {
     width: 70%;
     margin: 0 auto;
 }
-.UserTable, .UserTable th, .UserTable td {
+
+.UserTable,
+.UserTable th,
+.UserTable td {
     border: 1px solid #BAD1C2
 }
+
 table thead th {
     background: #4FA095;
     font-size: 18px !important;
     font-weight: 700 !important;
     color: #fff !important;
 }
-Thead{
+
+Thead {
     background-color: rgb(233, 104, 247);
     padding: 6px;
     text-transform: uppercase;
     font-weight: bold;
-} 
+}
 
-#errorMsg{
+#errorMsg {
     color: red;
     font-size: larger;
 }
-.buttoncontainer{
+
+.buttoncontainer {
     text-align: right;
     display: block;
- }
-.addNewUser{
+}
+
+.addNewUser {
     font-size: 17px;
     background-color: #3C4048;
     color: #fff;
@@ -47,17 +56,24 @@ Thead{
     width: 150px;
     padding: 10px;
     margin: 30px 0 5px 0;
- }
- .tableContainer{
+}
+
+.tableContainer {
     position: relative;
- }
- .clickhere{
+}
+
+.clickhere {
     background: transparent;
     border: none;
     color: blue;
-    
- }
- .clickhere:hover{
+}
+
+.clickhere:hover {
     cursor: pointer;
     color: rgb(250, 82, 39);
- }
+}
+
+.Toastify__toast {
+    background-color: green;
+    color: #fff;
+}
