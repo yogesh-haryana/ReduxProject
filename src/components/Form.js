@@ -34,7 +34,7 @@ function Form() {
           </div>
           <div className="formbody">
             <form name="userdataform" onSubmit={handleSubmit((e) => onSubmit(e))}>
-              <h2>Personal Details: </h2>
+              <p className="formSubHeading">Personal Details: </p>
               <Stack direction="row" spacing={2}>
                 <TextField
                   label="Name"
@@ -71,6 +71,9 @@ function Form() {
                   error={Boolean(errors.email)}
                   helperText={errors.email?.message}
                 />
+              </Stack>
+              <br />
+              <Stack direction="row" spacing={2}>
                 <TextField
                   label="Phone Number"
                   variant="outlined"
@@ -84,9 +87,6 @@ function Form() {
                   error={Boolean(errors.phone)}
                   helperText={errors.phone?.message}
                 />
-              </Stack>
-              <br />
-              <Stack direction="row" spacing={2}>
                 <TextField
                   label="Website"
                   variant="outlined"
@@ -101,7 +101,7 @@ function Form() {
                   helperText={errors.website?.message}
                 />
               </Stack>
-              <h2>Company: </h2>
+              <p className="formSubHeading">Company: </p>
               <Stack direction="row" spacing={2}>
                 <TextField
                   label="Name"
@@ -143,7 +143,7 @@ function Form() {
                   helperText={errors.company?.catchphrase?.message}
                 />
               </Stack>
-              <h2>Address: </h2>
+              <p className="formSubHeading">Address: </p>
               <Stack direction="row" spacing={2}>
                 <TextField
                   label="Street"
@@ -185,6 +185,9 @@ function Form() {
                   error={Boolean(errors.address?.city)}
                   helperText={errors.address?.city?.message}
                 />
+              </Stack>
+              <br />
+              <Stack direction="row" spacing={2}>
                 <TextField
                   label="Zipcode"
                   variant="outlined"
@@ -199,7 +202,8 @@ function Form() {
                   helperText={errors.address?.zipcode?.message}
                 />
               </Stack>
-              <h2>Geo: </h2>
+
+              <p className="formSubHeading">Geo: </p>
               <Stack direction="row" spacing={2}>
                 <TextField
                   label="lat"
