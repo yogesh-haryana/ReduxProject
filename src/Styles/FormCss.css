@@ -3,14 +3,13 @@
     width: 60%;
     font-size: 12px;
     box-sizing: border-box;
-    max-height: 700px;
     border: 1px solid #BAD1C2;
     border-radius: 3px;
     margin: 10px auto;
 }
 
 input {
-    width: 165px !important;
+    width: 200px !important;
     height: 25px !important;
 }
 
@@ -26,19 +25,21 @@ input {
     font-weight: 600;
     color: #04AA6D;
 }
-.formSubHeading{
+.formSubHeading {
     font-size: 17px;
     font-weight: 500;
     color: #04AA6D;
 }
 
 .formbody {
-    margin: 0 auto !important;
-    /* padding: 0px 12px 12px 12px; */
+    width: 100%;
+    margin: 0 auto 20px auto !important;
+    padding: 0px 12px 12px 12px;
 }
 
 .buttons-container {
-    margin: 10px 2% 0 0;
+    margin-top: 10px;
+    margin-right: 2%;
 }
 
 .submit-btn,
