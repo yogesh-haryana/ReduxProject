@@ -1,82 +1,84 @@
-.formpopup .formoverlay{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(129, 129, 129);
-    opacity: 0.6;
-    z-index: 1;
-}
 .formcontent {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    /* transition: all 5s ease-in-out; */
     background: #fff;
     width: 60%;
-    z-index: 2;
     font-size: 12px;
     box-sizing: border-box;
     max-height: 600px;
-    border: none;
+    border: 1px solid #181818;
     border-radius: 3px;
+    margin: auto;
 }
-.popupheader{
+
+.popupheader {
     text-align: center;
     width: 100%;
-    background-color: #3082d3;
     height: 40px;
     line-height: 2px;
 }
-.formheading{
+
+.formheading {
     font-size: 20px;
-    font-weight:600;
-    color: white;
+    font-weight: 600;
+    color: #04AA6D;
 }
-.formbody{
+
+.formbody {
     margin: 0 !important;
     padding: 0px 12px 12px 12px;
 }
-TextField{
+
+TextField {
     height: 40px;
 }
+
 .formpopup .close-form {
     position: absolute;
     top: 20px;
     right: 20px;
 }
-.container{
+
+.container {
     width: 45%;
     display: inline-block;
     margin-top: 0;
 }
-.buttons-container{
+
+.buttons-container {
     margin: 10px 2% 0 0;
 }
-.submit-btn, .cancle-btn{
+
+.submit-btn,
+.cancle-btn {
     float: right;
     cursor: pointer;
     height: 30px;
     width: 70px;
 }
-.submit-btn{
+
+.submit-btn {
     margin-left: 15px !important;
 }
-.error-msg{
+
+.error-msg {
     color: #d32f2f;
     display: block;
 }
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
     height: 1.em !important;
     padding: 6px 6px !important;
     font-size: 12px !important;
 }
-.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root{
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
     font-size: 12px !important;
     line-height: 4px !important;
     overflow: visible !important;
     text-overflow: ellipsis !important;
     padding-bottom: 5px !important;
+}
+
+.Toastify__toast {
+    background-color: green;
+    color: #fff;
 }

@@ -24,7 +24,7 @@ body {
 }
 
 table thead th {
-    background: #4FA095;
+    background: #04AA6D;
     font-size: 18px !important;
     font-weight: 700 !important;
     color: #fff !important;
@@ -42,22 +42,6 @@ Thead {
     font-size: larger;
 }
 
-.buttoncontainer {
-    text-align: right;
-    display: block;
-}
-
-.addNewUser {
-    font-size: 17px;
-    background-color: #3C4048;
-    color: #fff;
-    border: none;
-    border-radius: 2px;
-    width: 150px;
-    padding: 10px;
-    margin: 30px 0 5px 0;
-}
-
 .tableContainer {
     position: relative;
 }
@@ -73,7 +57,3 @@ Thead {
     color: rgb(250, 82, 39);
 }
 
-.Toastify__toast {
-    background-color: green;
-    color: #fff;
-}

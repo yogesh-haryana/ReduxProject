@@ -3,17 +3,13 @@ import {
   Table, TableContainer, TableRow, TableCell, TableBody, TableHead,
 } from '@mui/material';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import UserInfoModal from './UserInfoModal';
-import FormUserData from './FormUserData';
 
 function UserData() {
   const [details, setDetails] = useState([]);
   const [errorMsg, setMsg] = useState('');
   const [buttonPopUp, setButtonPopUp] = useState(false);
   const [userDetails, setuserDetails] = useState([]);
-  const [formPopUp, setFormPopUp] = useState(false);
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/users')
@@ -25,19 +21,8 @@ function UserData() {
       });
   }, []);
 
-  const notify = () => toast('User Details Saved Successfully.');
-
-  function FormDataInParentcomp(item) {
-    setDetails([...details, item]);
-    notify();
-  }
-  const totalData = details.length;
-
   return (
     <div className="mainWrapper">
-      <div className="buttoncontainer">
-        <button type="button" className="addNewUser" onClick={() => setFormPopUp(true)}>Add New User</button>
-      </div>
       <TableContainer className="tableContainer">
         <Table className="UserTable">
           <caption>A basic table with user Data from remote API</caption>
@@ -76,14 +61,7 @@ function UserData() {
           </TableBody>
         </Table>
       </TableContainer>
-      <FormUserData
-        formTrigger={formPopUp}
-        totalElements={totalData}
-        setFormTrigger={setFormPopUp}
-        DataTransfer={FormDataInParentcomp}
-      />
       <UserInfoModal info={userDetails} trigger={buttonPopUp} setTrigger={setButtonPopUp} />
-      <ToastContainer className="Toast" />
     </div>
   );
 }

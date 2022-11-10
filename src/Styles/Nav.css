@@ -1,0 +1,28 @@
+.NavbarContainer {
+    width: 100%;
+    background-color: #383838;
+    height: 44px;
+    /* overflow: hidden; */
+}
+
+.NavbarContainer a {
+    color: #fff;
+    width: auto;
+    display: inline-block;
+    padding: 0 12px;
+    height: 100%;
+    border: none;
+    text-decoration: none;
+    white-space: normal;
+    align-items: center;
+    line-height: 44px;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+.NavbarContainer .navLinks:hover {
+    background-color: black;
+    color: #fff;
+}
