@@ -13,10 +13,17 @@ function Form() {
 
   const notify = () => toast('User Details Saved Successfully.');
 
-  const onSubmit = () => {
-    // const item = data;
-    // item.id = Math.floor(Math.random() * Math.random() * 100) + 1;
-    // DataTransfer(item);
+  const onSubmit = (data) => {
+    const item = data;
+    item.id = Math.floor(Math.random() * Math.random() * 100) + 1;
+    let localUserData;
+    if (localStorage.getItem('userdata')) {
+      localUserData = JSON.parse(localStorage.getItem('userdata'));
+    } else {
+      localUserData = [];
+    }
+    localUserData.push(item);
+    localStorage.setItem('userdata', JSON.stringify(localUserData));
     reset('');
     notify();
   };

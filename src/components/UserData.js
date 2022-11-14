@@ -12,14 +12,25 @@ function UserData() {
   const [userDetails, setuserDetails] = useState([]);
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-      .then((response) => {
-        setDetails(response.data);
-      })
-      .catch(() => {
-        setMsg('cannot retrieve User-Data');
-      });
-  }, []);
+    let localUserData;
+    const oldRecords = localStorage.getItem('userdata');
+    if (oldRecords == null) {
+      localUserData = [];
+    } else {
+      localUserData = JSON.parse(oldRecords);
+    }
+    if (!localStorage.getItem('userdata')) {
+      axios.get('https://jsonplaceholder.typicode.com/users')
+        .then((response) => {
+          localStorage.setItem('userdata', JSON.stringify(response.data));
+          setDetails(response.data);
+        })
+        .catch(() => {
+          setMsg('cannot retrieve User-Data');
+        });
+    }
+    setDetails(localUserData);
+  }, [details]);
 
   return (
     <div className="mainWrapper">
