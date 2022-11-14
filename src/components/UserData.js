@@ -30,7 +30,7 @@ function UserData() {
         });
     }
     setDetails(localUserData);
-  }, [details]);
+  }, []);
 
   return (
     <div className="mainWrapper">
