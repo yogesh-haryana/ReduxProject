@@ -4,8 +4,10 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import UserInfoModal from './UserInfoModal';
+import useStyles from './UserDataStyles';
 
 function UserData() {
+  const classes = useStyles();
   const [details, setDetails] = useState([]);
   const [errorMsg, setMsg] = useState('');
   const [buttonPopUp, setButtonPopUp] = useState(false);
@@ -33,10 +35,9 @@ function UserData() {
   }, []);
 
   return (
-    <div className="mainWrapper">
-      <TableContainer className="tableContainer">
-        <Table className="UserTable">
-          <caption>A basic table with user Data from remote API</caption>
+    <div className={classes.mainWrapper}>
+      <TableContainer sx={{ maxHeight: 450 }} className={classes.tableContainer}>
+        <Table stickyHeader aria-label="sticky table" className={classes.UserTable}>
           <TableHead>
             <TableRow>
               <TableCell>FullName</TableCell>
@@ -55,7 +56,7 @@ function UserData() {
                   <TableCell>
                     <button
                       type="button"
-                      className="clickhere"
+                      className={classes.clickhere}
                       onClick={
                         () => setuserDetails(detail, setButtonPopUp(true))
                       }
@@ -67,7 +68,7 @@ function UserData() {
               ))
             }
             {
-              (errorMsg) && <div id="errorMsg">{errorMsg}</div>
+              (errorMsg) && <div className={classes.errorMsg}>{errorMsg}</div>
             }
           </TableBody>
         </Table>

@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../Styles/Nav.css';
+import useStyles from './NavStyles';
 
 function Navbar() {
-  const [isActive, setActive] = useState('');
+  const classes = useStyles();
+
+  const [isActive, setActive] = useState('home');
   return (
     <div>
-      <div className="NavbarContainer">
-        <NavLink className={` ${isActive === 'home' ? 'navLinks active' : 'navLinks'}`} onClick={() => setActive('home')} to="/">Home</NavLink>
-        <NavLink className={` ${isActive === 'form' ? 'navLinks active' : 'navLinks'}`} onClick={() => setActive('form')} to="/form">Add New User</NavLink>
+      <div className={classes.NavbarContainer}>
+        <NavLink className={isActive === classes.home ? `${classes.navLinks} ${classes.active}` : classes.navLinks} onClick={() => setActive(classes.home)} to="/">Home</NavLink>
+        <NavLink className={isActive === classes.form ? `${classes.navLinks} ${classes.active}` : classes.navLinks} onClick={() => setActive(classes.form)} to="/form">Add New User</NavLink>
       </div>
     </div>
   );

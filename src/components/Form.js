@@ -1,11 +1,12 @@
 import { React } from 'react';
-import '../Styles/FormCss.css';
 import { Stack, TextField, Button } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useStyles from './FormStyle';
 
 function Form() {
+  const classes = useStyles();
   const {
     register, handleSubmit, reset,
     formState: { errors },
@@ -34,17 +35,17 @@ function Form() {
 
   return (
     <div>
-      <div className="formcontent">
+      <div className={classes.formcontent}>
         <Stack spacing={2}>
-          <div className="popupheader">
-            <p className="formheading">User Details Form</p>
+          <div className={classes.popupheader}>
+            <p className={classes.formheading}>User Details Form</p>
           </div>
-          <div className="formbody">
+          <div className={classes.formbody}>
             <form name="userdataform" onSubmit={handleSubmit((e) => onSubmit(e))}>
-              <p className="formSubHeading">Personal Details: </p>
+              <p className={classes.formSubHeading}>Personal Details: </p>
               <Stack direction="row" spacing={2}>
                 <TextField
-                  label="Name"
+                  placeholder="Name"
                   variant="outlined"
                   {...register('name', {
                     required: 'Name is Required',
@@ -57,7 +58,7 @@ function Form() {
                   helperText={errors.name?.message}
                 />
                 <TextField
-                  label="UserName"
+                  placeholder="UserName"
                   variant="outlined"
                   {...register('username', {
                     required: 'Username is Required',
@@ -66,7 +67,7 @@ function Form() {
                   helperText={errors.username?.message}
                 />
                 <TextField
-                  label="Email"
+                  placeholder="Email"
                   variant="outlined"
                   {...register('email', {
                     required: 'Email is Required',
@@ -82,7 +83,7 @@ function Form() {
               <br />
               <Stack direction="row" spacing={2}>
                 <TextField
-                  label="Phone Number"
+                  placeholder="Phone Number"
                   variant="outlined"
                   {...register('phone', {
                     required: 'Phone Number is Required',
@@ -95,7 +96,7 @@ function Form() {
                   helperText={errors.phone?.message}
                 />
                 <TextField
-                  label="Website"
+                  placeholder="Website"
                   variant="outlined"
                   {...register('website', {
                     required: 'Web address is Required',
@@ -108,10 +109,10 @@ function Form() {
                   helperText={errors.website?.message}
                 />
               </Stack>
-              <p className="formSubHeading">Company: </p>
+              <p className={classes.formSubHeading}>Company: </p>
               <Stack direction="row" spacing={2}>
                 <TextField
-                  label="Name"
+                  placeholder="Name"
                   variant="outlined"
                   {...register('company.name', {
                     required: 'Company Name is Required',
@@ -124,7 +125,7 @@ function Form() {
                   helperText={errors.company?.name?.message}
                 />
                 <TextField
-                  label="Bs"
+                  placeholder="Bs"
                   variant="outlined"
                   {...register('company.bs', {
                     required: 'Bs is Required',
@@ -137,7 +138,7 @@ function Form() {
                   helperText={errors.company?.bs?.message}
                 />
                 <TextField
-                  label="Catch Phrase"
+                  placeholder="Catch Phrase"
                   variant="outlined"
                   {...register('company.catchphrase', {
                     required: 'Catch Phrase is Required',
@@ -150,10 +151,10 @@ function Form() {
                   helperText={errors.company?.catchphrase?.message}
                 />
               </Stack>
-              <p className="formSubHeading">Address: </p>
+              <p className={classes.formSubHeading}>Address: </p>
               <Stack direction="row" spacing={2}>
                 <TextField
-                  label="Street"
+                  placeholder="Street"
                   variant="outlined"
                   {...register('address.street', {
                     required: 'Street is Required',
@@ -166,7 +167,7 @@ function Form() {
                   helperText={errors.address?.street?.message}
                 />
                 <TextField
-                  label="Suite"
+                  placeholder="Suite"
                   variant="outlined"
                   {...register('address.suite', {
                     required: 'Suite is Required',
@@ -180,7 +181,7 @@ function Form() {
 
                 />
                 <TextField
-                  label="City"
+                  placeholder="City"
                   variant="outlined"
                   {...register('address.city', {
                     required: 'City is Required',
@@ -196,7 +197,7 @@ function Form() {
               <br />
               <Stack direction="row" spacing={2}>
                 <TextField
-                  label="Zipcode"
+                  placeholder="Zipcode"
                   variant="outlined"
                   {...register('address.zipcode', {
                     required: 'Zipcode is Required',
@@ -210,10 +211,10 @@ function Form() {
                 />
               </Stack>
 
-              <p className="formSubHeading">Geo: </p>
+              <p className={classes.formSubHeading}>Geo: </p>
               <Stack direction="row" spacing={2}>
                 <TextField
-                  label="lat"
+                  placeholder="lat"
                   variant="outlined"
                   {...register('address.geo.lat', {
                     required: 'Latitude is Required',
@@ -226,7 +227,7 @@ function Form() {
                   helperText={errors.address?.geo?.lat?.message}
                 />
                 <TextField
-                  label="lng"
+                  placeholder="lng"
                   variant="outlined"
                   {...register('address.geo.lng', {
                     required: 'Longitude is Required',
@@ -239,14 +240,14 @@ function Form() {
                   helperText={errors.address?.geo?.lng?.message}
                 />
               </Stack>
-              <div className="buttons-container">
-                <Button type="submit" variant="contained" className="submit-btn">Submit</Button>
-                <Button variant="outlined" className="cancle-btn" onClick={onCancel}>Reset</Button>
+              <div className={classes.buttonsContainer}>
+                <Button type="submit" variant="contained" className={classes.submitBtn}>Submit</Button>
+                <Button variant="outlined" className={classes.cancleBtn} onClick={onCancel}>Reset</Button>
               </div>
             </form>
           </div>
         </Stack>
-        <ToastContainer className="Toast" />
+        <ToastContainer className={classes.Toastify__toast} />
       </div>
     </div>
   );

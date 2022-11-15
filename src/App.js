@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import FormUserData from './components/Form';
 import UserData from './components/UserData';
 // import UserInfoModal from './components/UserInfoModal';
-import './Styles/StyleUserData.css';
+// import './Styles/StyleUserData.css';
 
 function App() {
   return (
