@@ -63,10 +63,6 @@ const useStyles = makeStyles({
     color: '#d32f2f',
     display: 'block',
   },
-  Toastify__toast: {
-    backgroundColor: 'green',
-    color: '#fff',
-  },
 });
 
 export default useStyles;
