@@ -5,12 +5,11 @@ const useStyles = makeStyles({
     padding: 10,
     background: '#fff',
     width: '70%',
-    fontSize: 12,
     boxSizing: 'border-box',
     margin: '0 auto',
     '& input': {
       fontSize: '14px',
-      padding: '7px',
+      padding: '8px',
     },
   },
   popupheader: {
@@ -20,12 +19,13 @@ const useStyles = makeStyles({
     lineHeight: '2px',
   },
   formheading: {
-    fontSize: '20px',
+    fontSize: '24px',
     fontWeight: 600,
     color: '#04AA6D',
   },
   formSubHeading: {
-    fontSize: '17px',
+    marginLeft: '23px',
+    fontSize: '20px',
     fontWeight: 500,
     color: '#04AA6D',
   },
@@ -36,7 +36,7 @@ const useStyles = makeStyles({
     textAlign: 'left',
     position: 'relative',
     margin: '0 auto',
-    padding: '0 20px',
+    padding: '0 5px',
   },
   inputGroups: {
     display: 'flex',
@@ -47,8 +47,10 @@ const useStyles = makeStyles({
     width: '33.33%',
     '& div': {
       width: '90%',
-      margin: '0 0 8px 8px',
-      padding: '0 0 8px 8px',
+      margin: '0 0 10px 10px',
+      '& p': {
+        fontSize: '1em',
+      },
     },
   },
   buttonsContainer: {

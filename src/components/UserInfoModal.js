@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     height: '100vh',
     backgroundColor: 'rgb(129,129,129)',
     opacity: 0.6,
-    zIndex: 1,
+    zIndex: 2,
   },
   content: {
     position: 'fixed',
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     background: '#fff',
     width: '400px',
     height: '350px',
-    zIndex: 2,
+    zIndex: 3,
     textAlign: 'center',
     padding: '10px',
     boxSizing: 'border-box',

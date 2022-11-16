@@ -273,15 +273,15 @@ function Form() {
                 />
               </div>
             </div>
+            <div className={classes.buttonsContainer}>
+              <div>
+                <Button variant="outlined" className={classes.cancleBtn} onClick={onReset}>Reset</Button>
+              </div>
+              <div>
+                <Button type="submit" variant="contained" className={classes.submitBtn}>Submit</Button>
+              </div>
+            </div>
           </form>
-          <div className={classes.buttonsContainer}>
-            <div>
-              <Button variant="outlined" className={classes.cancleBtn} onClick={onReset}>Reset</Button>
-            </div>
-            <div>
-              <Button type="submit" variant="contained" className={classes.submitBtn}>Submit</Button>
-            </div>
-          </div>
         </div>
         <ToastContainer className={classes.Toastify__toast} />
       </div>
