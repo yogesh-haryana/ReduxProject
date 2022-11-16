@@ -18,9 +18,6 @@ const useStyles = makeStyles({
       lineHeight: '44px',
     },
   },
-  active: {
-    backgroundColor: '#04AA6D',
-  },
   navLinks: {
     '&:hover': {
       backgroundColor: 'black',
