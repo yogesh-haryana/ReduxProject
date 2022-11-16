@@ -8,11 +8,28 @@ import useStyles from './FormStyle';
 function Form() {
   const classes = useStyles();
   const {
-    register, handleSubmit, reset,
+    register, handleSubmit, resetField,
     formState: { errors },
   } = useForm();
 
   const notify = () => toast('User Details Saved Successfully.');
+
+  const onReset = () => {
+    resetField('name');
+    resetField('username');
+    resetField('email');
+    resetField('phone');
+    resetField('website');
+    resetField('company.name');
+    resetField('company.catchphrase');
+    resetField('company.bs');
+    resetField('address.suite');
+    resetField('address.street');
+    resetField('address.zipcode');
+    resetField('address.city');
+    resetField('address.geo.lat');
+    resetField('address.geo.lng');
+  };
 
   const onSubmit = (data) => {
     const item = data;
@@ -25,12 +42,8 @@ function Form() {
     }
     localUserData.push(item);
     localStorage.setItem('userdata', JSON.stringify(localUserData));
-    reset('');
+    onReset();
     notify();
-  };
-
-  const onCancel = () => {
-    reset('');
   };
 
   return (
@@ -242,7 +255,7 @@ function Form() {
               </Stack>
               <div className={classes.buttonsContainer}>
                 <Button type="submit" variant="contained" className={classes.submitBtn}>Submit</Button>
-                <Button variant="outlined" className={classes.cancleBtn} onClick={onCancel}>Reset</Button>
+                <Button variant="outlined" className={classes.cancleBtn} onClick={onReset}>Reset</Button>
               </div>
             </form>
           </div>
