@@ -1,16 +1,17 @@
-# User Data
+# User Data with Routes
 
 ## Project Description:
 
-User Data is a Webpage application made of using JavaScript's very popular library React - Js. It is having a nested Data of individual's from a remote API. A form component is used to insert a user defined data in the table in which the API data is shown. An another pop up component is use to show the important information from that nested API.
+User Data is a multipage application made of using JavaScript's very popular library React - Js.It have a navbar at the top of the application which have Links to route on different pages. It is having a nested Data of individual's from a remote API. A form component on the second page is used to insert a user defined data in the table in which the API data is shown. The User-defined data submitted through form uses localstorage of the browser to prevent the data loss on refreshes the applocation.  An another pop up component is use to show the important information from that nested API.
 
 
 ## Technology Used :
 
 - React JS : JavaScript's library React.js is used to develop the application.
+- Material UI : Some Material UI components like sticky header Table, React Toast and Hook form is used.
 - JavaScript : JavaScript's basics and some advanced concepts like API calling, Error Handling is used in the application.
 - JSX : JavaScript XML is used to structure the page and using Different UI components inside React.js.
-- CSS : Cascading Style Sheet is used to style the page and make it more attractive and user's eye comfortable.
+- Matrial CSS : MUI makeStyle is used to style the page and make it more attractive and user's eye comfortable.
 
 ## What I've Learnt :
 
@@ -20,13 +21,15 @@ I have Learnt :
 - A brief knowledge about States, Props and Hooks.
 - About APIs, their real life use and how to use them.
 - Some material UI components like Sticky Table and React Toast.
+- MUI makeStyle CSS appliying on the components in same as well as diferent js files.
+- Use of localStorage multiple times on different pages on the same application.
 - Importance of ES-lint and its setup.
 - Writing Clean and Efficient code.
-- Git and Github.
+- Git and Github like raising PR and playing with multiple branches.
 
 ## _Setup Project_
 
-Get a clone of application from [Here](https://github.com/yogesh-haryana/UserDataProject.git)
+Get a clone of application from [Here](https://github.com/yogesh-haryana/ReactRouting.git)
 
 ## Available Scripts
 
