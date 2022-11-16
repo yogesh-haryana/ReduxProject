@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { Stack, TextField, Button } from '@mui/material';
+import { TextField, Button } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -49,14 +49,14 @@ function Form() {
   return (
     <div>
       <div className={classes.formcontent}>
-        <Stack spacing={2}>
+        <div className={classes.formbody}>
           <div className={classes.popupheader}>
             <p className={classes.formheading}>User Details Form</p>
           </div>
-          <div className={classes.formbody}>
-            <form name="userdataform" onSubmit={handleSubmit((e) => onSubmit(e))}>
-              <p className={classes.formSubHeading}>Personal Details: </p>
-              <Stack direction="row" spacing={2}>
+          <form name="userdataform" onSubmit={handleSubmit((e) => onSubmit(e))}>
+            <p className={classes.formSubHeading}>Personal Details: </p>
+            <div className={classes.inputGroups}>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Name"
                   variant="outlined"
@@ -70,6 +70,8 @@ function Form() {
                   error={Boolean(errors.name)}
                   helperText={errors.name?.message}
                 />
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="UserName"
                   variant="outlined"
@@ -79,6 +81,8 @@ function Form() {
                   error={Boolean(errors.username)}
                   helperText={errors.username?.message}
                 />
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Email"
                   variant="outlined"
@@ -92,9 +96,8 @@ function Form() {
                   error={Boolean(errors.email)}
                   helperText={errors.email?.message}
                 />
-              </Stack>
-              <br />
-              <Stack direction="row" spacing={2}>
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Phone Number"
                   variant="outlined"
@@ -108,6 +111,8 @@ function Form() {
                   error={Boolean(errors.phone)}
                   helperText={errors.phone?.message}
                 />
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Website"
                   variant="outlined"
@@ -121,9 +126,11 @@ function Form() {
                   error={Boolean(errors.website)}
                   helperText={errors.website?.message}
                 />
-              </Stack>
-              <p className={classes.formSubHeading}>Company: </p>
-              <Stack direction="row" spacing={2}>
+              </div>
+            </div>
+            <p className={classes.formSubHeading}>Company: </p>
+            <div className={classes.inputGroups}>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Name"
                   variant="outlined"
@@ -137,6 +144,8 @@ function Form() {
                   error={Boolean(errors.company?.name)}
                   helperText={errors.company?.name?.message}
                 />
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Bs"
                   variant="outlined"
@@ -150,6 +159,8 @@ function Form() {
                   error={Boolean(errors.company?.bs)}
                   helperText={errors.company?.bs?.message}
                 />
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Catch Phrase"
                   variant="outlined"
@@ -163,9 +174,11 @@ function Form() {
                   error={Boolean(errors.company?.catchphrase)}
                   helperText={errors.company?.catchphrase?.message}
                 />
-              </Stack>
-              <p className={classes.formSubHeading}>Address: </p>
-              <Stack direction="row" spacing={2}>
+              </div>
+            </div>
+            <p className={classes.formSubHeading}>Address: </p>
+            <div className={classes.inputGroups}>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Street"
                   variant="outlined"
@@ -179,6 +192,8 @@ function Form() {
                   error={Boolean(errors.address?.street)}
                   helperText={errors.address?.street?.message}
                 />
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Suite"
                   variant="outlined"
@@ -193,6 +208,8 @@ function Form() {
                   helperText={errors.address?.suite?.message}
 
                 />
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="City"
                   variant="outlined"
@@ -206,9 +223,8 @@ function Form() {
                   error={Boolean(errors.address?.city)}
                   helperText={errors.address?.city?.message}
                 />
-              </Stack>
-              <br />
-              <Stack direction="row" spacing={2}>
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="Zipcode"
                   variant="outlined"
@@ -222,10 +238,11 @@ function Form() {
                   error={Boolean(errors.address?.zipcode)}
                   helperText={errors.address?.zipcode?.message}
                 />
-              </Stack>
-
-              <p className={classes.formSubHeading}>Geo: </p>
-              <Stack direction="row" spacing={2}>
+              </div>
+            </div>
+            <p className={classes.formSubHeading}>Geo: </p>
+            <div className={classes.inputGroups}>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="lat"
                   variant="outlined"
@@ -239,6 +256,8 @@ function Form() {
                   error={Boolean(errors.address?.geo?.lat)}
                   helperText={errors.address?.geo?.lat?.message}
                 />
+              </div>
+              <div className={classes.inputBoxDiv}>
                 <TextField
                   placeholder="lng"
                   variant="outlined"
@@ -252,14 +271,18 @@ function Form() {
                   error={Boolean(errors.address?.geo?.lng)}
                   helperText={errors.address?.geo?.lng?.message}
                 />
-              </Stack>
-              <div className={classes.buttonsContainer}>
-                <Button type="submit" variant="contained" className={classes.submitBtn}>Submit</Button>
-                <Button variant="outlined" className={classes.cancleBtn} onClick={onReset}>Reset</Button>
               </div>
-            </form>
+            </div>
+          </form>
+          <div className={classes.buttonsContainer}>
+            <div>
+              <Button variant="outlined" className={classes.cancleBtn} onClick={onReset}>Reset</Button>
+            </div>
+            <div>
+              <Button type="submit" variant="contained" className={classes.submitBtn}>Submit</Button>
+            </div>
           </div>
-        </Stack>
+        </div>
         <ToastContainer className={classes.Toastify__toast} />
       </div>
     </div>

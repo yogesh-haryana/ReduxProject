@@ -12,17 +12,19 @@ const useStyles = makeStyles({
   },
 
   UserTable: {
-    margin: '25px 0',
     border: '1px solid #BAD1C2',
+    margin: '25px 0',
     '& th': {
       border: '1px solid #BAD1C2',
       background: '#04AA6D',
       fontSize: '18px',
-      fontWeight: '700',
+      fontWeight: '600',
       color: '#fff',
+      padding: '10px',
     },
     '& td': {
       border: '1px solid #BAD1C2',
+      padding: '8px',
     },
   },
   mainWrapper: {

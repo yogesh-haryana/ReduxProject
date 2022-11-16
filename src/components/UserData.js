@@ -36,7 +36,7 @@ function UserData() {
 
   return (
     <div className={classes.mainWrapper}>
-      <TableContainer sx={{ maxHeight: 450 }} className={classes.tableContainer}>
+      <TableContainer sx={{ maxHeight: 500 }} className={classes.tableContainer}>
         <Table stickyHeader aria-label="sticky table" className={classes.UserTable}>
           <TableHead>
             <TableRow>
