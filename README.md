@@ -52,14 +52,14 @@ Launches the test runner in the interactive watch mode.
 Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.
+The build is minified and the file names include the hashes.
 Your app is ready to be deployed!
 
 ## How to run - Video and Screenshots Tutorial
 
-[![Watch the video](https://drive.google.com/uc?export=view&id=1jHrW0TQa09Ap8la4xU79nruAmhYzxhTc)](https://drive.google.com/uc?export=view&id=1HEkik4VkW7XVs7jaxy6YPBJ63f1F49dt)
+[![Watch the video](src/assets/Screenshot%202022-11-18Route2.png)](https://drive.google.com/uc?export=view&id=1H0FMlW3afIgdzmXp9LBvD_ilmxlnGgvn)
 
-
+<!-- 
 ![screenshot](https://drive.google.com/uc?export=view&id=1jHrW0TQa09Ap8la4xU79nruAmhYzxhTc)
 
 ![screenshot](https://drive.google.com/uc?export=view&id=1_v36_OHd6UOi9bny74ZMLjz8Q0xUJsX1)
@@ -70,4 +70,29 @@ Your app is ready to be deployed!
 
 ![screenshot](https://drive.google.com/uc?export=view&id=1JOdRZhErqTGB-8C8tRjBONyfnhSl8vc9)
 
-![screenshot](https://drive.google.com/uc?export=view&id=1ryaSZrK3xgcZUqpup1gv624r320wv6r8)
+![screenshot](https://drive.google.com/uc?export=view&id=1ryaSZrK3xgcZUqpup1gv624r320wv6r8) -->
+
+Home - Page
+
+![Home Page](src/assets/Screenshot%202022-11-18Route1.png)
+
+Add New User 
+
+![Add New User ](src/assets/Screenshot%202022-11-18Route2.png)
+
+
+Form Scrolled
+
+![Form Scrolled ](src/assets/Screenshot%202022-11-18Route3.png)
+
+Form Validation Message
+
+![Form Validation Message](src/assets/Screenshot%202022-11-18Route4.png)
+
+Submission Success Message 
+
+![Toast](src/assets/Screenshot%202022-11-18Route5.png)
+
+User Details PopUp
+
+![PopUp](src/assets/Screenshot%202022-11-18Route6.png)
