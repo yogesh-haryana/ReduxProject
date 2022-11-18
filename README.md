@@ -57,20 +57,10 @@ Your app is ready to be deployed!
 
 ## How to run - Video and Screenshots Tutorial
 
+Video - Click to Play
+
 [![Watch the video](src/assets/Screenshot%202022-11-18Route2.png)](https://drive.google.com/uc?export=view&id=1H0FMlW3afIgdzmXp9LBvD_ilmxlnGgvn)
 
-<!-- 
-![screenshot](https://drive.google.com/uc?export=view&id=1jHrW0TQa09Ap8la4xU79nruAmhYzxhTc)
-
-![screenshot](https://drive.google.com/uc?export=view&id=1_v36_OHd6UOi9bny74ZMLjz8Q0xUJsX1)
-
-![screenshot](https://drive.google.com/uc?export=view&id=12zleMD-nHVv8rxx_QK9oWACtMQeJS3jZ)
-
-![screenshot](https://drive.google.com/uc?export=view&id=1Dq4iU9uz5uoVKyPuj0lT2P9g_ssOIMlk)
-
-![screenshot](https://drive.google.com/uc?export=view&id=1JOdRZhErqTGB-8C8tRjBONyfnhSl8vc9)
-
-![screenshot](https://drive.google.com/uc?export=view&id=1ryaSZrK3xgcZUqpup1gv624r320wv6r8) -->
 
 Home - Page
 
