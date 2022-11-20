@@ -33,15 +33,7 @@ function Form() {
 
   const onSubmit = (data) => {
     const item = data;
-    item.id = Math.floor(Math.random() * Math.random() * 100) + 1;
-    let localUserData;
-    if (localStorage.getItem('userdata')) {
-      localUserData = JSON.parse(localStorage.getItem('userdata'));
-    } else {
-      localUserData = [];
-    }
-    localUserData.push(item);
-    localStorage.setItem('userdata', JSON.stringify(localUserData));
+    item.id = Math.floor(Math.random() * Math.random() * 1000) + 1;
     onReset();
     notify();
   };

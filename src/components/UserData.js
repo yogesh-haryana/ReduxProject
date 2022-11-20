@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   Table, TableContainer, TableRow, TableCell, TableBody, TableHead,
 } from '@mui/material';
-import axios from 'axios';
+import ApiHelper from './ApiHelper';
 import UserInfoModal from './UserInfoModal';
 import useStyles from './UserDataStyles';
 
@@ -13,25 +13,20 @@ function UserData() {
   const [buttonPopUp, setButtonPopUp] = useState(false);
   const [userDetails, setuserDetails] = useState([]);
 
+  function successHandler(response) {
+    setDetails(response);
+    setMsg('');
+  }
+  function errorHandler() {
+    setMsg('UserData Cannot Retrieved');
+  }
+
   useEffect(() => {
-    let localUserData;
-    const oldRecords = localStorage.getItem('userdata');
-    if (oldRecords == null) {
-      localUserData = [];
-    } else {
-      localUserData = JSON.parse(oldRecords);
-    }
-    if (!localStorage.getItem('userdata')) {
-      axios.get('https://jsonplaceholder.typicode.com/users')
-        .then((response) => {
-          localStorage.setItem('userdata', JSON.stringify(response.data));
-          setDetails(response.data);
-        })
-        .catch(() => {
-          setMsg('cannot retrieve User-Data');
-        });
-    }
-    setDetails(localUserData);
+    const httpObj = {
+      url: 'https://jsonplaceholder.typicode.com/users',
+      method: 'get',
+    };
+    ApiHelper(httpObj, successHandler, errorHandler);
   }, []);
 
   return (
@@ -48,7 +43,7 @@ function UserData() {
           </TableHead>
           <TableBody>
             {
-              details.length && details.map((detail) => (
+              details?.length && details.map((detail) => (
                 <TableRow key={detail?.id}>
                   <TableCell>{detail?.name}</TableCell>
                   <TableCell>{detail?.email}</TableCell>
